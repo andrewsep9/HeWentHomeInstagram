@@ -46,7 +46,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zn8-be-enz">
                                 <rect key="frame" x="174" y="464" width="67" height="46"/>
@@ -64,13 +64,14 @@
                     <connections>
                         <outlet property="passwordTextField" destination="6YV-1g-0xI" id="bvA-nN-cI5"/>
                         <outlet property="usernameTextField" destination="Xxd-GM-E9L" id="zJ3-Wp-tZE"/>
+                        <segue destination="29k-4A-OKC" kind="presentation" identifier="FeedSegue" id="56W-gU-oZQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="251" y="30"/>
+            <point key="canvasLocation" x="-4" y="29"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Instagram-->
         <scene sceneID="XWH-PN-QzE">
             <objects>
                 <tableViewController id="GvM-YW-Xfl" sceneMemberID="viewController">
@@ -93,7 +94,7 @@
                             <outlet property="delegate" destination="GvM-YW-Xfl" id="Dh6-1F-mhS"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="6Dt-qn-rXC"/>
+                    <navigationItem key="navigationItem" title="Instagram" id="6Dt-qn-rXC"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WRs-Uk-0Dd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
