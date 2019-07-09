@@ -13,7 +13,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,7 +64,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="6YV-1g-0xI" id="bvA-nN-cI5"/>
                         <outlet property="usernameTextField" destination="Xxd-GM-E9L" id="zJ3-Wp-tZE"/>
-                        <segue destination="29k-4A-OKC" kind="presentation" identifier="FeedSegue" id="56W-gU-oZQ"/>
+                        <segue destination="PMx-ki-gjh" kind="show" identifier="FeedSegue" id="Ujb-5t-r1j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -108,12 +108,64 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PuL-0Y-3Vz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1176.8115942028987" y="845.75892857142856"/>
+            <point key="canvasLocation" x="2332" y="852"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="d6e-Ha-mkg">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eaL-hY-dfp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="ICs-pi-B1r" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PlN-DD-Kvh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="oG0-au-OA3"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="insta_camera_btn" id="oiA-ja-qtV"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1383" y="1593"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JN1-cT-4rT">
+            <objects>
+                <viewController id="ZQv-Xm-KJD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dkj-gm-73l">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="RzR-Bv-vPL"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="profile_tab" id="rLi-kz-VsM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pte-Lb-nAq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1383" y="2351"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Foz-Tb-Oya">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarStoryboard" id="PMx-ki-gjh" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="h9v-f9-0jL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="29k-4A-OKC" kind="relationship" relationship="viewControllers" id="T6G-RX-QkY"/>
+                        <segue destination="ICs-pi-B1r" kind="relationship" relationship="viewControllers" id="g8f-ia-IIp"/>
+                        <segue destination="ZQv-Xm-KJD" kind="relationship" relationship="viewControllers" id="HRA-Zn-jWI"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j05-8b-epr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="1276"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kJo-tF-z5W">
             <objects>
                 <navigationController storyboardIdentifier="NavigationStoryboard" id="29k-4A-OKC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="feed_tab" id="CIb-iJ-PCf"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BgM-oF-orc">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -124,7 +176,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kyK-Sq-jnA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4" y="846"/>
+            <point key="canvasLocation" x="1383" y="852"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="5aM-zB-d29">
@@ -188,4 +240,9 @@
             <point key="canvasLocation" x="1148" y="30"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="feed_tab" width="25" height="25"/>
+        <image name="insta_camera_btn" width="25" height="25"/>
+        <image name="profile_tab" width="25" height="25"/>
+    </resources>
 </document>
