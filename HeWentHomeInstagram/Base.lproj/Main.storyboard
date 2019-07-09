@@ -13,7 +13,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,34 +71,34 @@
             </objects>
             <point key="canvasLocation" x="-4" y="29"/>
         </scene>
-        <!--Instagram-->
-        <scene sceneID="XWH-PN-QzE">
+        <!--Feed View Controller-->
+        <scene sceneID="1M3-XP-0aI">
             <objects>
-                <tableViewController id="GvM-YW-Xfl" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SG5-Ln-6xp">
+                <viewController id="361-Py-QEG" customClass="FeedViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iPo-U9-I9S">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MXi-JN-11d">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="LyM-yW-pP8">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LyM-yW-pP8" id="1Fp-17-4hW">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="GvM-YW-Xfl" id="6d5-FJ-bBz"/>
-                            <outlet property="delegate" destination="GvM-YW-Xfl" id="Dh6-1F-mhS"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Instagram" id="6Dt-qn-rXC"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WRs-Uk-0Dd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <viewLayoutGuide key="safeArea" id="jkR-UE-4E0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JQy-tO-o2U">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="P7Z-Hg-JcA">
+                            <connections>
+                                <action selector="logoutTapped:" destination="361-Py-QEG" id="viU-R7-18x"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PuL-0Y-3Vz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1168" y="847"/>
+            <point key="canvasLocation" x="1176.8115942028987" y="845.75892857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kJo-tF-z5W">
@@ -109,12 +109,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="GvM-YW-Xfl" kind="relationship" relationship="rootViewController" id="Boa-zw-LVD"/>
+                        <segue destination="361-Py-QEG" kind="relationship" relationship="rootViewController" id="qsc-Ss-7b1"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kyK-Sq-jnA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="252" y="847"/>
+            <point key="canvasLocation" x="-4" y="846"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="5aM-zB-d29">
