@@ -71,7 +71,7 @@
             </objects>
             <point key="canvasLocation" x="-4" y="29"/>
         </scene>
-        <!--Feed View Controller-->
+        <!--Home Feed-->
         <scene sceneID="1M3-XP-0aI">
             <objects>
                 <viewController id="361-Py-QEG" customClass="FeedViewController" sceneMemberID="viewController">
@@ -98,7 +98,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="jkR-UE-4E0"/>
                     </view>
-                    <navigationItem key="navigationItem" id="JQy-tO-o2U">
+                    <navigationItem key="navigationItem" title="Home Feed" id="JQy-tO-o2U">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="P7Z-Hg-JcA">
                             <connections>
                                 <action selector="logoutTapped:" destination="361-Py-QEG" id="viU-R7-18x"/>
@@ -110,11 +110,11 @@
             </objects>
             <point key="canvasLocation" x="2332" y="852"/>
         </scene>
-        <!--View Controller-->
+        <!--Camera View Controller-->
         <scene sceneID="d6e-Ha-mkg">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eaL-hY-dfp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="ICs-pi-B1r" sceneMemberID="viewController">
+                <viewController id="ICs-pi-B1r" customClass="CameraViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PlN-DD-Kvh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -124,7 +124,7 @@
                     <tabBarItem key="tabBarItem" title="" image="insta_camera_btn" id="oiA-ja-qtV"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1383" y="1593"/>
+            <point key="canvasLocation" x="1383" y="1582"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="JN1-cT-4rT">

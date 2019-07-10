@@ -11,6 +11,7 @@
 		3D9E442B22D4168C00B32EB2 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9E442A22D4168C00B32EB2 /* User.m */; };
 		3D9E443022D51FD300B32EB2 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9E442F22D51FD300B32EB2 /* SignUpViewController.m */; };
 		3D9E443322D5460700B32EB2 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9E443222D5460700B32EB2 /* FeedViewController.m */; };
+		3D9E443622D55E5700B32EB2 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9E443522D55E5700B32EB2 /* CameraViewController.m */; };
 		3DC6DBC022D3FAE700BD66DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6DBBF22D3FAE700BD66DC /* AppDelegate.m */; };
 		3DC6DBC322D3FAE700BD66DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6DBC222D3FAE700BD66DC /* ViewController.m */; };
 		3DC6DBC622D3FAE700BD66DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC6DBC422D3FAE700BD66DC /* Main.storyboard */; };
@@ -51,6 +52,8 @@
 		3D9E442F22D51FD300B32EB2 /* SignUpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		3D9E443122D5460700B32EB2 /* FeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
 		3D9E443222D5460700B32EB2 /* FeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		3D9E443422D55E5700B32EB2 /* CameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		3D9E443522D55E5700B32EB2 /* CameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		3DC6DBBB22D3FAE700BD66DC /* HeWentHomeInstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeWentHomeInstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC6DBBE22D3FAE700BD66DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3DC6DBBF22D3FAE700BD66DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -114,6 +117,8 @@
 				3D9E442F22D51FD300B32EB2 /* SignUpViewController.m */,
 				3D9E443122D5460700B32EB2 /* FeedViewController.h */,
 				3D9E443222D5460700B32EB2 /* FeedViewController.m */,
+				3D9E443422D55E5700B32EB2 /* CameraViewController.h */,
+				3D9E443522D55E5700B32EB2 /* CameraViewController.m */,
 			);
 			path = "View Contollers";
 			sourceTree = "<group>";
@@ -429,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D9E442B22D4168C00B32EB2 /* User.m in Sources */,
+				3D9E443622D55E5700B32EB2 /* CameraViewController.m in Sources */,
 				3D9E442822D4159A00B32EB2 /* LoginViewController.m in Sources */,
 				3D9E443322D5460700B32EB2 /* FeedViewController.m in Sources */,
 				3D9E443022D51FD300B32EB2 /* SignUpViewController.m in Sources */,
