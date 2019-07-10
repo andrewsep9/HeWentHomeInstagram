@@ -12,6 +12,9 @@
 		3D9E443022D51FD300B32EB2 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9E442F22D51FD300B32EB2 /* SignUpViewController.m */; };
 		3D9E443322D5460700B32EB2 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9E443222D5460700B32EB2 /* FeedViewController.m */; };
 		3D9E443622D55E5700B32EB2 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9E443522D55E5700B32EB2 /* CameraViewController.m */; };
+		3D9E443922D5876200B32EB2 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9E443822D5876200B32EB2 /* Post.m */; };
+		3D9E443C22D58E8E00B32EB2 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9E443B22D58E8E00B32EB2 /* ComposeViewController.m */; };
+		3D9E443F22D5C29A00B32EB2 /* Billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D9E443E22D5C29A00B32EB2 /* Billabong.ttf */; };
 		3DC6DBC022D3FAE700BD66DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6DBBF22D3FAE700BD66DC /* AppDelegate.m */; };
 		3DC6DBC322D3FAE700BD66DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC6DBC222D3FAE700BD66DC /* ViewController.m */; };
 		3DC6DBC622D3FAE700BD66DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC6DBC422D3FAE700BD66DC /* Main.storyboard */; };
@@ -54,6 +57,11 @@
 		3D9E443222D5460700B32EB2 /* FeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
 		3D9E443422D55E5700B32EB2 /* CameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		3D9E443522D55E5700B32EB2 /* CameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		3D9E443722D5876200B32EB2 /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		3D9E443822D5876200B32EB2 /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		3D9E443A22D58E8E00B32EB2 /* ComposeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
+		3D9E443B22D58E8E00B32EB2 /* ComposeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
+		3D9E443E22D5C29A00B32EB2 /* Billabong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Billabong.ttf; sourceTree = "<group>"; };
 		3DC6DBBB22D3FAE700BD66DC /* HeWentHomeInstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeWentHomeInstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC6DBBE22D3FAE700BD66DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3DC6DBBF22D3FAE700BD66DC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -119,6 +127,8 @@
 				3D9E443222D5460700B32EB2 /* FeedViewController.m */,
 				3D9E443422D55E5700B32EB2 /* CameraViewController.h */,
 				3D9E443522D55E5700B32EB2 /* CameraViewController.m */,
+				3D9E443A22D58E8E00B32EB2 /* ComposeViewController.h */,
+				3D9E443B22D58E8E00B32EB2 /* ComposeViewController.m */,
 			);
 			path = "View Contollers";
 			sourceTree = "<group>";
@@ -128,8 +138,18 @@
 			children = (
 				3D9E442922D4168C00B32EB2 /* User.h */,
 				3D9E442A22D4168C00B32EB2 /* User.m */,
+				3D9E443722D5876200B32EB2 /* Post.h */,
+				3D9E443822D5876200B32EB2 /* Post.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3D9E443D22D5C27700B32EB2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3D9E443E22D5C29A00B32EB2 /* Billabong.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		3DC6DBB222D3FAE700BD66DC = {
@@ -157,6 +177,7 @@
 		3DC6DBBD22D3FAE700BD66DC /* HeWentHomeInstagram */ = {
 			isa = PBXGroup;
 			children = (
+				3D9E443D22D5C27700B32EB2 /* Fonts */,
 				3D9E442C22D416CA00B32EB2 /* View Contollers */,
 				3D9E442D22D416DE00B32EB2 /* Models */,
 				3DC6DBBE22D3FAE700BD66DC /* AppDelegate.h */,
@@ -323,6 +344,7 @@
 				3DC6DBCB22D3FAE800BD66DC /* LaunchScreen.storyboard in Resources */,
 				3DC6DBC822D3FAE800BD66DC /* Assets.xcassets in Resources */,
 				3DC6DBC622D3FAE700BD66DC /* Main.storyboard in Resources */,
+				3D9E443F22D5C29A00B32EB2 /* Billabong.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,7 +458,9 @@
 				3D9E442B22D4168C00B32EB2 /* User.m in Sources */,
 				3D9E443622D55E5700B32EB2 /* CameraViewController.m in Sources */,
 				3D9E442822D4159A00B32EB2 /* LoginViewController.m in Sources */,
+				3D9E443C22D58E8E00B32EB2 /* ComposeViewController.m in Sources */,
 				3D9E443322D5460700B32EB2 /* FeedViewController.m in Sources */,
+				3D9E443922D5876200B32EB2 /* Post.m in Sources */,
 				3D9E443022D51FD300B32EB2 /* SignUpViewController.m in Sources */,
 				3DC6DBC322D3FAE700BD66DC /* ViewController.m in Sources */,
 				3DC6DBCE22D3FAE800BD66DC /* main.m in Sources */,

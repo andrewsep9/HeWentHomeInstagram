@@ -19,9 +19,16 @@
 
 @implementation LoginViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = self.view.bounds;
+    gradient.colors = [NSArray arrayWithObjects:(id)([UIColor colorWithRed:0.0 green:0.9764705896377563 blue:0.05882352963089943 alpha:1.00].CGColor), (id)([UIColor colorWithRed:0.0 green:0.5294117647058824 blue:0.8980392156862745 alpha:1.00].CGColor), nil];
+    gradient.startPoint = CGPointMake(0.00, 0.00);
+    gradient.endPoint = CGPointMake(1.00, 1.00);
+    [self.view.layer insertSublayer:gradient atIndex:0];
+    NSLog(@"Opened");
 }
 
 - (void)loginUser {

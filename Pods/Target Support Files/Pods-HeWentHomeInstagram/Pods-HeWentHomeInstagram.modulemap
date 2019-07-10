@@ -1,0 +1,6 @@
+framework module Pods_HeWentHomeInstagram {
+  umbrella header "Pods-HeWentHomeInstagram-umbrella.h"
+
+  export *
+  module * { export * }
+}
