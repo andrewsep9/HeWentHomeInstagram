@@ -18,7 +18,6 @@
 
 
 @interface FeedViewController () <UITableViewDelegate, UITableViewDataSource>
-//ComposeViewControllerDelegate
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *postss;
@@ -34,7 +33,6 @@
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-//    self.tableView.rowHeight = 800;
     
     [self fetchPosts];
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
@@ -52,6 +50,11 @@
 //    [self.postss insertObject:post atIndex:0];
 //    [self.tableView reloadData];
 //}
+
+-(void) viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self fetchPosts];
+}
 
 
 - (void) fetchPosts{

@@ -90,7 +90,6 @@
         }
         else{
             NSLog(@"Posted!");
-//            [self.delegate didPost:Post];
             
             [self.parentViewController.tabBarController setSelectedIndex:0];
     
