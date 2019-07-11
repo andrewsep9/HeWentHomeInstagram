@@ -7,6 +7,7 @@ target 'HeWentHomeInstagram' do
 
   # Pods for HeWentHomeInstagram
   pod 'Parse'
+  pod 'DateTools'
 
   target 'HeWentHomeInstagramTests' do
     inherit! :search_paths

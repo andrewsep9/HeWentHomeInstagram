@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) Post *post;
 @property (weak, nonatomic) IBOutlet UIImageView *feedPostImage;
 @property (weak, nonatomic) IBOutlet UILabel *feedPostLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeStampLabel;
 
 @end
 

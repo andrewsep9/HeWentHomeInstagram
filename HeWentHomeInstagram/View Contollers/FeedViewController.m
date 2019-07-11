@@ -7,7 +7,6 @@
 //
 
 #import "FeedViewController.h"
-#import "User.h"
 #import <Parse/Parse.h>
 #import "PFUser.h"
 #import "LoginViewController.h"
@@ -15,6 +14,8 @@
 #import "PostCell.h"
 #import "Post.h"
 #import "ComposeViewController.h"
+#import "DetailsViewController.h"
+#import "NSDate+DateTools.h"
 
 
 @interface FeedViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -34,6 +35,10 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     @{NSForegroundColorAttributeName:[UIColor blackColor],
+       NSFontAttributeName:[UIFont fontWithName:@"Billabong" size:35]}];
+    
     [self fetchPosts];
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(beginRefresh:) forControlEvents:UIControlEventValueChanged];
@@ -46,10 +51,6 @@
     [refreshControl endRefreshing];
 }
 
-//- (void) didPost:(Post *)post{
-//    [self.postss insertObject:post atIndex:0];
-//    [self.tableView reloadData];
-//}
 
 -(void) viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
@@ -75,6 +76,7 @@
             NSLog(@"Okay %@", error.localizedDescription);
         }
     }];
+    
 }
 
 - (IBAction)logoutTapped:(UIBarButtonItem *)sender {
@@ -85,7 +87,6 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
     appDelegate.window.rootViewController = loginViewController;
-    
 }
 
 
@@ -95,8 +96,11 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    
+    UITableViewCell *tappedCell = sender;
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:tappedCell];
+    Post *detailsPost = self.postss[indexPath.row];
+    DetailsViewController *detailsViewController = [segue destinationViewController];
+    detailsViewController.detailsPost = detailsPost;
 }
 
 
@@ -108,9 +112,7 @@
     
     UIImage *image = [[UIImage alloc] initWithData:post.image.getData];
     cell.feedPostImage.image = image;
-    
-    
-    
+    cell.timeStampLabel.text = cell.post.createdAt.timeAgoSinceNow;
     return cell;
     
     
