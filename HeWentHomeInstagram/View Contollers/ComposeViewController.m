@@ -8,8 +8,9 @@
 
 #import "ComposeViewController.h"
 #import "Post.h"
+#import "FeedViewController.h"
 
-@interface ComposeViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITabBarControllerDelegate>
+@interface ComposeViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITabBarControllerDelegate, UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *postImageView;
 @property (weak, nonatomic) IBOutlet UITextView *postTextView;
@@ -21,6 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.postTextView.delegate = self;
+    
     self.tabBarController.delegate = self;
     
     UIImagePickerController *imagePickerVC = [UIImagePickerController new];
@@ -33,7 +36,10 @@
         NSLog(@"Camera 🚫 available so we will use photo library instead");
         imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     }
-    [self presentViewController:imagePickerVC animated:YES completion:nil];
+    [self presentViewController:imagePickerVC animated:YES completion:^{
+        self.postTextView.text = @"Insert caption here";
+        self.postTextView.textColor = [UIColor lightGrayColor];
+    }];
     NSLog(@"Bruh");
     }
 
@@ -45,7 +51,6 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     // Get the image captured by the UIImagePickerController
-    UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
     UIImage *editedImage = info[UIImagePickerControllerEditedImage];
     // Do something with the images (based on your use case)
     // Dismiss UIImagePickerController to go back to your original view controller
@@ -77,5 +82,42 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)shareTapped:(UIBarButtonItem *)sender {
+    [Post postUserImage:self.postImageView.image withCaption:self.postTextView.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
+        if (error != nil){
+            NSLog(@"Error: %@", error.localizedDescription);
+        }
+        else{
+            NSLog(@"Posted!");
+//            [self.delegate didPost:Post];
+            
+            [self.parentViewController.tabBarController setSelectedIndex:0];
+    
+        }
+    }];
+}
+
+//Placeholder in UITextView method #1
+- (void)textViewDidBeginEditing:(UITextView *)captionTextView
+{
+    if ([self.postTextView.text isEqualToString:@"Insert caption here"]) {
+        self.postTextView.text  = @"";
+        self.postTextView.textColor = [UIColor blackColor];
+    }
+    [self.postTextView becomeFirstResponder];
+}
+
+//Placeholder in UITextView method #2
+- (void)textViewDidEndEditing:(UITextView *)captionTextView
+{
+    if ([self.postTextView.text isEqualToString:@""]) {
+        self.postTextView.text = @"Insert caption here";
+        self.postTextView.textColor = [UIColor lightGrayColor];
+    }
+    [self.postTextView resignFirstResponder];
+}
+
+
 
 @end

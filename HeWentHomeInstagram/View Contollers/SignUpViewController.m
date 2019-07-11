@@ -20,16 +20,47 @@
 @end
 
 @implementation SignUpViewController
+@synthesize gifImageView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    CAGradientLayer *gradient = [CAGradientLayer layer];
-    gradient.frame = self.view.bounds;
-    gradient.colors = [NSArray arrayWithObjects:(id)([UIColor colorWithRed:0.0 green:0.9764705896377563 blue:0.05882352963089943 alpha:1.00].CGColor), (id)([UIColor colorWithRed:0.0 green:0.5294117647058824 blue:0.8980392156862745 alpha:1.00].CGColor), nil];
-    gradient.startPoint = CGPointMake(0.00, 0.00);
-    gradient.endPoint = CGPointMake(1.00, 1.00);
-    [self.view.layer insertSublayer:gradient atIndex:0];
+//    CAGradientLayer *gradient = [CAGradientLayer layer];
+//    gradient.frame = self.gifImageView.bounds;
+//    gradient.colors = [NSArray arrayWithObjects:(id)([UIColor colorWithRed:0.0 green:0.9764705896377563 blue:0.05882352963089943 alpha:1.00].CGColor), (id)([UIColor colorWithRed:0.0 green:0.5294117647058824 blue:0.8980392156862745 alpha:1.00].CGColor), nil];
+//    gradient.startPoint = CGPointMake(0.00, 0.00);
+//    gradient.endPoint = CGPointMake(1.00, 1.00);
+//    [self.gifImageView.layer insertSublayer:gradient atIndex:0];
+    
+
+    
+    gifImageView.animationImages = [[NSArray alloc] initWithObjects:
+                                    [UIImage imageNamed:@"1.png"],
+                                    [UIImage imageNamed:@"2.png"],
+                                    [UIImage imageNamed:@"3.png"],
+                                    [UIImage imageNamed:@"4.png"],
+                                    [UIImage imageNamed:@"5.png"],
+                                    [UIImage imageNamed:@"6.png"],
+                                    [UIImage imageNamed:@"7.png"],
+                                    [UIImage imageNamed:@"8.png"],
+                                    [UIImage imageNamed:@"9.png"],
+                                    [UIImage imageNamed:@"10.png"],
+                                    [UIImage imageNamed:@"11.png"],
+                                    [UIImage imageNamed:@"12.png"],
+                                    [UIImage imageNamed:@"13.png"],
+                                    [UIImage imageNamed:@"14.png"],
+                                    [UIImage imageNamed:@"15.png"],
+                                    [UIImage imageNamed:@"16.png"],
+                                    [UIImage imageNamed:@"17.png"],
+                                    [UIImage imageNamed:@"18.png"],
+                                    [UIImage imageNamed:@"19.png"],
+                                    [UIImage imageNamed:@"20.png"],
+
+                                     nil];
+    [gifImageView setAnimationRepeatCount:0];
+    gifImageView.animationDuration = 6;
+    [gifImageView startAnimating];
+    
 }
 
 - (void)registerUser {

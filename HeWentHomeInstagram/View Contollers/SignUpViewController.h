@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SignUpViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *gifImageView;
+
 @end
 
 NS_ASSUME_NONNULL_END
