@@ -28,7 +28,6 @@
     gradient.startPoint = CGPointMake(0.00, 0.00);
     gradient.endPoint = CGPointMake(1.00, 1.00);
     [self.view.layer insertSublayer:gradient atIndex:0];
-    NSLog(@"Opened");
 }
 
 - (void)loginUser {
