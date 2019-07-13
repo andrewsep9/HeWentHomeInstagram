@@ -28,6 +28,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = PFUser.currentUser[@"username"];
+    
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     [self fetchPosts];
@@ -40,6 +42,7 @@
     query.limit = 20;
     [query orderByDescending:@"createdAt"];
     [query includeKey:@"author"];
+    [query whereKey:@"author" equalTo:PFUser.currentUser];
     
     // fetch data asynchronously
     [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {

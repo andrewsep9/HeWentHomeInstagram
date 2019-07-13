@@ -114,6 +114,8 @@
     UIImage *image = [[UIImage alloc] initWithData:post.image.getData];
     cell.feedPostImage.image = image;
     cell.timeStampLabel.text = cell.post.createdAt.timeAgoSinceNow;
+    PFUser *temp = post[@"author"];
+    cell.usernameLabel.text = temp[@"username"];
     return cell;
     
     
