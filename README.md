@@ -23,7 +23,7 @@ The following **optional** features are implemented:
 - [ ] Style the feed to look like the real Instagram feed.
 - [X] User can use a tab bar to switch between all "Instagram" posts and posts published only by the user. AKA, tabs for Home Feed and Profile
 - [ ] User can load more posts once he or she reaches the bottom of the feed using infinite scrolling.
-- [ ] Show the username and creation time for each post
+- [X] Show the username and creation time for each post
 - [ ] After the user submits a new post, show a progress HUD while the post is being uploaded to Parse
 - User Profiles:
   - [ ] Allow the logged in user to add a profile photo
@@ -33,14 +33,12 @@ The following **optional** features are implemented:
 - [ ] User can like a post and see number of likes for each post in the post details screen.
 - [ ] Implement a custom camera view.
 
-The following **additional** features are implemented:
-
-- [ ] List anything else that you can get done to improve the app functionality!
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1. 
-2.
+1. Ways of replicating how Instagram's user profile works. When scrolling through a profile, the top disappears partially while the photos continue scrolling.
+
+2. What type of data structures could be most efficient when trying to keep track of which user liked which post.
 
 ## Video Walkthrough
 
@@ -64,7 +62,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2019 Andrew Sepulveda
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
